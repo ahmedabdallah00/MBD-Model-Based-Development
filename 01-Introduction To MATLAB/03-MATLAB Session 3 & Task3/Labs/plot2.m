@@ -1,0 +1,10 @@
+x= 1:10;
+y=10:10:100;
+plot(x,y);
+grid on;
+z = linspace(-2,2,100);
+e=z.^2;
+plot(z,e,"LineWidth",4,"Color",[0.2,0.3,0.5],"Marker","o");
+xlabel("Time");
+ylabel("length");
+title("Time");
