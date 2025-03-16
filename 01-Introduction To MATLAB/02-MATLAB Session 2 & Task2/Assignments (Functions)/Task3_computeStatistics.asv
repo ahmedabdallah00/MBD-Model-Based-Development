@@ -1,0 +1,3 @@
+function [Mean,Standard_Deviation]=computeStatistics(data)
+         Mean = mean(data);
+         Standard_Deviation

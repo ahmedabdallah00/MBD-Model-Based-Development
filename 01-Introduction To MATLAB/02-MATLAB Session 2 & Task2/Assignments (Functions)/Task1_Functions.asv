@@ -1,0 +1,4 @@
+function result=mySimpleFunction(num1,num2)
+      result = num1 +num2;
+
+result_sum=mySimpleFunction(5,6);
