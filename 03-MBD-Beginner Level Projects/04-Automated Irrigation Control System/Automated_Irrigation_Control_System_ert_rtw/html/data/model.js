@@ -1,0 +1,1 @@
+var modelInfo = {model:"Automated_Irrigation_Control_System"};var modelHierarchy=[{model:"Automated_Irrigation_Control_System",relativePath:"_internal.html",parent:"null"},];var AddCode = true;var ProtectedModel = false;
