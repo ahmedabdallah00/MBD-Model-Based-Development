@@ -1,0 +1,13 @@
+Modelname='CounterModel';
+new_system(Modelname,'Model');
+add_block('built-in/Subsystem',[Modelname '/Counter']);
+add_block('simulink/Sources/In1',[Modelname '/Counter/InitValue']);
+add_block('simulink/Sinks/Out1',[Modelname '/Counter/CounterValue']);
+add_block('simulink/Math Operations/Add',[Modelname '/Counter/Add']);
+add_block('simulink/Discrete/Unit Delay',[Modelname '/Counter/Unit Delay']);
+add_line([Modelname '/Counter'],'InitValue/1','Add/1');
+add_line([Modelname '/Counter'],'Add/1','CounterValue/1');
+add_line([Modelname '/Counter'],'Add/1','Unit Delay/1');
+add_line([Modelname '/Counter'],'Unit Delay/1','Add/2');
+set_param([Modelname '/Counter/Unit Delay'],'orientation','left');
+save_system(Modelname);

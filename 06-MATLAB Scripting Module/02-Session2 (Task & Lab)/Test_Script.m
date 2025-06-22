@@ -1,0 +1,9 @@
+load_system('P_Controller_Library.slx');
+new_system('Test_P_Controller','Model');
+add_block('P_Controller_Library/P_Controller','Test_P_Controller/P_Controller');
+add_block('simulink/Sources/Step','Test_P_Controller/Testsig');
+add_block('simulink/Sinks/Scope','Test_P_Controller/Dis');
+add_line('Test_P_Controller','Testsig/1','P_Controller/1');
+add_line('Test_P_Controller','P_Controller/1','Dis/1');
+open_system("Test_P_Controller");
+sim('Test_P_Controller','StopTime','15');
